@@ -1,0 +1,8 @@
+language: Swift
+os: osx
+osx_image: xcode10
+xcode_project: CocoaheadsCodeGolf.xcodeproj
+xcode_scheme: Anno
+script:
+ - xcodebuild -project CocoaheadsCodeGolf.xcodeproj -scheme Anno build-for-testing
+ - xctool -project CocoaheadsCodeGolf.xcodeproj -scheme Anno run-tests
